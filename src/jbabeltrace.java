@@ -18,14 +18,22 @@ public class jbabeltrace {
 			CTFTraceReader reader = new CTFTraceReader(trace);
 
 			while (reader.hasMoreEvents()) {
+				IntegerDefinition cpu_id = null;
 				EventDefinition currentEvent = reader.getCurrentEventDef();
-				StructDefinition currentPacketContext = currentEvent.getPacketContext();
+				StructDefinition currentPacketContext = currentEvent
+						.getPacketContext();
 
 				System.out.print("[" + currentEvent.getTimestamp() + "] ");
-				System.out.print(currentEvent.getDeclaration().getName() + ": ");
+				System.out
+						.print(currentEvent.getDeclaration().getName() + ": ");
 
-				IntegerDefinition cpu_id = (IntegerDefinition) currentPacketContext.lookupDefinition("cpu_id");
-				System.out.print("{ cpu_id = " + cpu_id.getValue() + " }, ");
+				if (currentPacketContext != null) {
+					cpu_id = (IntegerDefinition) currentPacketContext
+							.lookupDefinition("cpu_id");
+					if (cpu_id != null)
+						System.out.print("{ cpu_id = " + cpu_id.getValue()
+								+ " }, ");
+				}
 
 				StructDefinition fields = currentEvent.getFields();
 				System.out.print(fields.toString());
@@ -33,6 +41,7 @@ public class jbabeltrace {
 				System.out.println();
 
 				reader.advance();
+
 			}
 
 			System.out.println("Done");
