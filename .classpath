@@ -2,8 +2,7 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/org.eclipse.linuxtools.ctf.core"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/org.eclipse.linuxtools.ctf.core.tests"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/org.eclipse.linuxtools.ctf.parser"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/org.eclipse.tracecompass.ctf.core"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/org.eclipse.tracecompass.ctf.parser"/>
 	<classpathentry kind="output" path="bin1"/>
 </classpath>

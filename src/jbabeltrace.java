@@ -1,8 +1,8 @@
-import org.eclipse.linuxtools.ctf.core.event.EventDefinition;
-import org.eclipse.linuxtools.ctf.core.trace.CTFTrace;
-import org.eclipse.linuxtools.ctf.core.trace.CTFTraceReader;
-import org.eclipse.linuxtools.ctf.core.event.types.IntegerDefinition;
-import org.eclipse.linuxtools.ctf.core.event.types.StructDefinition;
+import org.eclipse.tracecompass.ctf.core.event.EventDefinition;
+import org.eclipse.tracecompass.ctf.core.trace.CTFTrace;
+import org.eclipse.tracecompass.ctf.core.trace.CTFTraceReader;
+import org.eclipse.tracecompass.ctf.core.event.types.IntegerDefinition;
+import org.eclipse.tracecompass.ctf.core.event.types.StructDefinition;
 
 public class jbabeltrace {
 	public static void main(String args[]) {
